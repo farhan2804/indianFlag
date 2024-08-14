@@ -202,7 +202,7 @@ button:active {
     }
 }
 .typing-text {
-    font-size: 30px;
+    font-size: 27px;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
