@@ -17,8 +17,7 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* z-index: 1; */
-    opacity: 0.4; /* Adjust this for transparency effect */
+    opacity: 0.4; 
 }
 
 .wrapper {
@@ -175,8 +174,8 @@ button:hover {
 }
 
 button:active {
-  background-color: #5a3c1f; /* Darker shade to show click effect */
-  transform: scale(0.95); /* Button scales down slightly when clicked */
+  background-color: #5a3c1f; 
+  transform: scale(0.95); 
 }
 
 

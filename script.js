@@ -4,7 +4,7 @@ function dropPetals() {
   
     for (let i = 0; i < totalPetals; i++) {
       setTimeout(createPetal, delay);
-      delay += 100; // Stagger creation by 100ms
+      delay += 100; 
     }
   }
   
@@ -20,7 +20,7 @@ function dropPetals() {
       "7.png",
       "8.png",
       "9.png",
-    ]; // Replace with actual image paths
+    ]; 
     petal.src = petalImages[Math.floor(Math.random() * petalImages.length)];
     petal.classList.add("petal");
     petal.style.left = Math.random() * 100 + "vw";
