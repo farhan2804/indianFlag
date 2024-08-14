@@ -1,0 +1,237 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* z-index: 1; */
+    opacity: 0.4; /* Adjust this for transparency effect */
+}
+
+.wrapper {
+  display: flex;
+}
+
+.flag {
+  width: 270px;
+  height: 180px;
+  box-shadow: 0px 0px 90px 1px #989;
+  background-color: transparent;
+  position: relative;
+  
+}
+.top {
+  height: 60px;
+  background-color: #ff9933;
+}
+
+.middle {
+  height: 60px;
+  background-color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom {
+  height: 60px;
+  background-color: green;
+}
+.wheel {
+  height: 43px;
+  width: 43px;
+  border: 2px solid #01008e;
+  border-radius: 45px;
+  position: relative;
+ 
+}
+
+.wheel .line {
+  height: 100%;
+  width: 1px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  background: darkblue;
+}
+
+.line:nth-child(1) {
+  transform: rotate(15deg);
+}
+
+.line:nth-child(2) {
+  transform: rotate(30deg);
+}
+
+.line:nth-child(3) {
+  transform: rotate(45deg);
+}
+
+.line:nth-child(4) {
+  transform: rotate(60deg);
+}
+
+.line:nth-child(5) {
+  transform: rotate(75deg);
+}
+
+.line:nth-child(6) {
+  transform: rotate(90deg);
+}
+
+.line:nth-child(7) {
+  transform: rotate(105deg);
+}
+
+.line:nth-child(8) {
+  transform: rotate(120deg);
+}
+
+.line:nth-child(9) {
+  transform: rotate(135deg);
+}
+
+.line:nth-child(10) {
+  transform: rotate(150deg);
+}
+
+.line:nth-child(11) {
+  transform: rotate(165deg);
+}
+
+.line:nth-child(12) {
+  transform: rotate(180deg);
+}
+.wheel {
+  animation-name: wheel;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+@keyframes wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.wave {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    128deg,
+    rgba(89, 72, 21, 0) 39%,
+    rgba(250, 245, 245, 0.8474025974025974) 46%,
+    rgba(89, 72, 21, 0) 53%
+  );
+  animation-name: wavy;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes wavy {
+  0% {
+    background-position: -400px 0px, -400px 0px, -400px 0px, -400px 0px;
+  }
+  100% {
+    background-position: 800px 0px, 800px 0px, 800px 0px, 800px 0px;
+  }
+}
+
+
+button {
+  background-color: #ec9639; 
+  font-family: cursive;
+  color: whitesmoke;
+  border: none;
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s, transform 0.1s;
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+button:hover {
+  background-color: #764007;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #5a3c1f; /* Darker shade to show click effect */
+  transform: scale(0.95); /* Button scales down slightly when clicked */
+}
+
+
+.petal {
+    position: absolute;
+    top: 0;
+    width: 18px;
+    height: auto;
+    pointer-events: none;
+    z-index: 2;
+    animation-name: fall;
+    animation-timing-function: linear;
+    opacity: 0.8;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0.5;
+    }
+}
+.typing-text {
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    width: 24ch;
+    animation: typing 3s steps(25) infinite alternate,
+               blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 24ch;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: #4a90e2;
+    }
+}
+
+
+.copyright{
+  margin-top:70px;
+  color:rgb(80, 79, 79);
+}
