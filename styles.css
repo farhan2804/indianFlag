@@ -230,7 +230,13 @@ button:active {
 }
 
 
-.copyright{
-  margin-top:70px;
-  color:rgb(80, 79, 79);
+
+  
+  h5.copyright {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 10px; 
+    font-size: 14px; 
+    color:rgb(80, 79, 79);
 }
